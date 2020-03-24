@@ -2,7 +2,7 @@
 <html lang="en">
   <style>
     body {
-      font-family: CiscoSans;
+      font-family: CiscoSans, Fallback, sans-serif;
       margin: 0;
     }
 
@@ -44,8 +44,11 @@
 
     @font-face {
       font-family: "CiscoSans";
+      src: url('webfont.eot'); /* IE9 Compat Modes */
       src: url("./CiscoSans-Regular.woff") format("woff"),
-       url('./CiscoSansTTRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./CiscoSansTTRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./CiscoSansTTRegular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./CiscoSansTTRegular.ttf')  format('truetype'), /* Safari, Android, iOS */;
     }
 
     .footer {
