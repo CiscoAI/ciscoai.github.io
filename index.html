@@ -7,12 +7,12 @@
     }
 
     a {
-      color: #FF6464;
+      color: #00bceb;
       text-decoration: none;
     }
   
     a:hover {
-      color: #40BCFF;
+      color: #5fc7ff;
     }
 
     .content {
@@ -45,10 +45,11 @@
     @font-face {
       font-family: "CiscoSans";
       src: url("./CiscoSans-Regular.woff") format("woff"),
+       url('./CiscoSansTTRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
     }
 
     .footer {
-      background: #101322;
+      background: #0d274d;
       color: #FFF;
       display: flex;
       flex-wrap: wrap;
@@ -68,11 +69,14 @@
     }
 
     .section-introduction {
-      background-color: #111422;
+      background-color: #0d274d;
       display: flex;
       flex-direction: column;
       height: 250px;
       justify-content: center;
+      -webkit-box-shadow: 0px 2px 4px #000000;
+      -moz-box-shadow: 0px 2px 4px #000000;
+      box-shadow: 0px 1px 3px #cdc1c1;
     }
     
     @media screen and (max-width : 680px) {
