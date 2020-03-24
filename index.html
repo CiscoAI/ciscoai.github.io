@@ -51,10 +51,15 @@
       background: #101322;
       color: #FFF;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       margin-top: 64px;
       min-height: 64px;
       padding: 24px 0;
+    }
+
+    .footer-items {
+      min-width: 200px;
     }
 
     h1 {
@@ -70,16 +75,23 @@
       justify-content: center;
     }
     
-    @media screen and (min-width : 320px) {
+    @media screen and (max-width : 680px) {
+      
       .content {
         width: 80%;
       }
       .flex-item-intro {
         width: 100%;
       }
+      .footer-items {
+        margin-top: 24px;
+      }
+      .section-introduction {
+        height: 500px;
+      }
     }
 
-    @media screen and (min-width: 680px) {
+    @media screen and (min-width: 681px) {
       .content {
         width: 60%;
       }
@@ -96,6 +108,7 @@
     <title>Cisco Kubeflow Starter Pack</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161751488-1"></script>
+    <meta id="viewport" name="viewport" content ="width=device-width" />
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -124,6 +137,7 @@
       </p>
       <div class="flex-container">
         <div class="flex-item-intro">
+        <p>
           <h3>
             For Data Scientists
           </h3>
@@ -135,16 +149,18 @@
             <li>High quality models with hyper parameter tuner Katib</li>
 
           </ul>
+        </p>
         </div>
         <div class="flex-item-intro">
-          
-          <h3>For Machine Learning Engineers</h3>
-          <ul>
-            <li>Easy management of complex machine learning system at scale with Pipelines</li>
-            <li>Role-based access and resources with Profile controller</li>
-            <li>Consistent and efficient operations with Kubernetes and optimized infrastructure usage</li>
-            <li>Automated scale-up, scale-down and models deployments with KFServing</li>
-          </ul>
+          <p>
+            <h3>For Machine Learning Engineers</h3>
+            <ul>
+              <li>Easy management of complex machine learning system at scale with Pipelines</li>
+              <li>Role-based access and resources with Profile controller</li>
+              <li>Consistent and efficient operations with Kubernetes and optimized infrastructure usage</li>
+              <li>Automated scale-up, scale-down and models deployments with KFServing</li>
+            </ul>
+          </p>
         </div>
       </div>
       <center>
@@ -174,7 +190,7 @@
     <div>
     </div>
     <footer class="footer">
-        <div class="flex-item">
+        <div class="footer-items">
           <b>Developers</b>
           <br>
           <br>
@@ -182,7 +198,7 @@
           <br>
           <a target="_blank" href="https://www.kubeflow.org/">Kubeflow</a>
         </div> 
-        <div class="flex-item">
+        <div class="footer-items">
           <b>More information</b>
           <br>
           <br>
@@ -190,7 +206,7 @@
           <br>
           <a target="_blank" href="https://blogs.cisco.com/cloud/consistent-ai-the-journey-together">Blog</a>
         </div> 
-        <div class="flex-item">
+        <div class="footer-items">
           <b>Help & Support</b>
           <br>
           <br>
